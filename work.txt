@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-fir1st
-=======
-first
-
 test
-
-t1
->>>>>>> b2
