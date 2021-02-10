@@ -74,24 +74,25 @@ def fetchFromList_L2():
     
     # starting time
     start = time.time()
-    print("Performance hit code" ,positionFromLine)
+    ##print("Performance hit code" ,positionFromLine)
     #Below code can cause performance impact, as before finding a matching element, alll 
     #elements of the list are shuffled and then search is applied to find an element.
     for x in range(1,shuffleTimes):
         random.shuffle(allPositionObjsList)
     for x in range(1,len(allPositionObjsList)) :
         obj=  allPositionObjsList[x]
-        print(obj.line)
-        print("{obj.line}",obj.line)
-        print("{positionFromLine}",positionFromLine)
+        ##print(obj.line)
+        ##print("{obj.line}",obj.line)
+        ##print("{positionFromLine}",positionFromLine)
         if(int(obj.line)==int(positionFromLine)):
             returnObj= obj
-            print("found object")
+            ##print("found object")
     # end time
     end = time.time()
     
+    timeDiffInMS=(end-start)*1000
     # total time taken
-    print(f"Total time taken to find element in case of performance impact code: {end - start}")
+    print(f"Total time taken to find element at index '{positionFromLine}' is: {timeDiffInMS} milli seconds")
     return returnObj
 
 def fetchFromList_L1():

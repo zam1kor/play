@@ -1,0 +1,2 @@
+export no_proxy=localhost,127.0.0.1
+sudo docker run --net=host -v ./input:/tmp -e traccar_client_config=./tmp/traccar-client.ini -e traccar_client_shuffleTimes=5 --cpuset-cpus=2-3 amd64/kuksa-traccar:0.1.0
