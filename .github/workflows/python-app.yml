@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: Default
+    runs-on: zgrp
 
     steps:
     - uses: actions/checkout@v3
